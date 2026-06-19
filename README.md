@@ -80,11 +80,12 @@ c:/Workshop_web/
    ```bash
    npm install
    ```
-3. (Optional) Setup environment variables if you are pointing to a different backend server:
+3. Setup environment variables to point to the backend server:
    - Create a `.env` file in the `frontend` folder:
      ```env
-     VITE_API_URL=http://localhost:5000/api/enquiry
+     VITE_API_URL=http://localhost:5000
      ```
+     *(Note: `VITE_API_URL` should point to the base URL of the API. If omitted, it defaults to `http://localhost:5000`.)*
 4. Start the development server:
    ```bash
    npm run dev
