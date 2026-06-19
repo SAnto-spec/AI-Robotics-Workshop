@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Nunito', 'Quicksand', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Quicksand', 'Nunito', system-ui, -apple-system, sans-serif;
+
+  --color-kids-indigo: #6366f1;
+  --color-kids-purple: #a855f7;
+  --color-kids-pink: #ec4899;
+  --color-kids-orange: #f97316;
+  --color-kids-yellow: #eab308;
+  --color-kids-sky: #0ea5e9;
+  --color-kids-green: #22c55e;
+  
+  --color-light-bg: #f8fafc;
+  --color-light-card: #ffffff;
+  --color-light-border: #e2e8f0;
+}
+
+/* Base resets & custom styles */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #f7fafc;
+  background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  color: #334155;
+  overflow-x: hidden;
+}
+
+/* Soft Glassmorphism styles */
+.soft-glass {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.soft-glass-dark {
+  background: rgba(15, 23, 42, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Playful Bento/Cartoon Cards */
+.bento-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 3px solid #1e293b;
+  border-radius: 2rem; /* 32px */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Playful offset cartoon shadows */
+.cartoon-shadow-orange {
+  box-shadow: 6px 6px 0px 0px #f97316;
+}
+.cartoon-shadow-purple {
+  box-shadow: 6px 6px 0px 0px #a855f7;
+}
+.cartoon-shadow-sky {
+  box-shadow: 6px 6px 0px 0px #0ea5e9;
+}
+.cartoon-shadow-pink {
+  box-shadow: 6px 6px 0px 0px #ec4899;
+}
+.cartoon-shadow-slate {
+  box-shadow: 6px 6px 0px 0px #1e293b;
+}
+.cartoon-shadow-yellow {
+  box-shadow: 6px 6px 0px 0px #eab308;
+}
+.cartoon-shadow-green {
+  box-shadow: 6px 6px 0px 0px #22c55e;
+}
+
+/* Hover and active states for cartoon elements */
+.bento-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px 0px #1e293b;
+}
+
+.bubbly-btn {
+  border: 3px solid #1e293b;
+  box-shadow: 4px 4px 0px 0px #1e293b;
+  transition: all 0.2s ease;
+}
+
+.bubbly-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #1e293b;
+}
+
+.bubbly-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #1e293b;
+}
+
+/* Dynamic shapes animation */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 7s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 2.5s;
+}
+
+/* Custom Text Gradients */
+.text-grad-orange {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #f97316 0%, #eab308 100%);
+}
+
+.text-grad-blue {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+}
+
+.text-grad-purple {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+  border: 3px solid #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
