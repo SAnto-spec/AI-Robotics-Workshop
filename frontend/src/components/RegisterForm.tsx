@@ -93,7 +93,8 @@ export default function RegisterForm(): React.JSX.Element {
     setIsSubmitting(true);
     
     // API Target
-    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/enquiry';
+    const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    const apiUrl = `${baseUrl.replace(/\/$/, '')}/api/enquiry`;
 
     try {
       const response = await fetch(apiUrl, {
